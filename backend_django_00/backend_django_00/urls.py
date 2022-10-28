@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from backend_django_00.views import bienvenida
+from backend_django_00.views import categoriaEdad,obtenerActual
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('bienvenida/', bienvenida)
+    path('bienvenida/', bienvenida),
+    path('categoriaEdad/<int:edad>',categoriaEdad),
+    path('obtenerActual/',obtenerActual)
 ]
